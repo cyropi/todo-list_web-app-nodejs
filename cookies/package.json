@@ -1,0 +1,21 @@
+{
+	"name": "web-app_todo-list",
+  "version": "0.0.1",
+  "description": "A simple Node.js web app",
+  "main": "index.js",
+  "type": "module",
+  "scripts": 
+  {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ciro Pizza",
+  "license": "ISC",
+  "dependencies": 
+  {
+    "@types/node": "^20.8.10",
+    "nodemon": "^3.0.1",
+    "pug": "^3.0.2",
+    "sqlite3": "^5.1.6"
+  }
+}
