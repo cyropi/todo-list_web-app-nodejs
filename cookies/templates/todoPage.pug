@@ -1,0 +1,25 @@
+
+extends ./baseLayout.pug
+
+
+block content
+	h1 Welcome to your To-do List
+	
+	p
+		| Links to reset the list or to go back to the homepage are on the navbar above.
+		br
+		| Use the form below to add new items to the To-do list!
+	
+	form(class="row g-3 align-items-end py-4" action="/todo" method="POST")
+		.col-md-9
+			label(for="todo" class="form-label") To-do Item
+			input(type="text" class="form-control" id="todo" name="todo" required)
+		
+		.col-md-3
+			button(class="btn btn-primary w-100" type="submit") Save To-do
+	
+	.list-group
+		each item in todoItems
+			a(class="list-group-item list-group-item-action" href="#")= item.todo 
+		else 
+			p(class="text-danger") The To-do list is currently empty! Add the first item using the form above.
