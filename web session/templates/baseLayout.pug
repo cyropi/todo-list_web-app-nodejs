@@ -1,1 +1,14 @@
 
+doctype html 
+
+html(lang="en")
+	include ./partials/head.pug
+
+	body(class="d-flex flex-column vh-100") 
+		include ./partials/navbar.pug
+
+		main(class="container mt-3")
+			include ./partials/alerts.pug
+			block content 
+
+		include ./partials/footer.pug
