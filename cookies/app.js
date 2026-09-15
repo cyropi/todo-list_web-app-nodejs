@@ -1,21 +1,18 @@
-
 "use strict";
 
-import http from 'http';
-import { handleRequest } from './routing.js';
-
+import http from "http";
+import { handleRequest } from "./routing.js";
 
 
 function main()
 {
-	const PORT = 3000;
+   const PORT = 3000;
 
-    let server = http.createServer();
-    server.listen(PORT);
-    
-    console.log(`Web app listening on port ${PORT}`);
+   let server = http.createServer();
+   server.listen(PORT);
+   server.on("request", handleRequest);
 
-	server.on("request", handleRequest);
+   console.log(`Web app listening on port ${PORT}`);
 }
 
 main();
