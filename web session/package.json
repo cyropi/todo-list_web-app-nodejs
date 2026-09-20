@@ -1,1 +1,22 @@
-
+{
+   "name": "todo-list_web-app",
+   "version": "0.0.1",
+   "description": "A simple todo list web app (server-side rendering), built with SQLite and featuring session tracking mechanism with server-side session and a client-side session id stored in cookies",
+   "main": "app.js",
+   "type": "module",
+   "scripts": {
+      "start": "nodemon app.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "author": "Ciro Pizza",
+   "license": "ISC",
+   "dependencies": {
+      "@types/node": "^20.8.10",
+      "nodemon": "^3.0.1",
+      "pug": "^3.0.2",
+      "sqlite3": "^5.1.7"
+   },
+   "allowScripts": {
+      "sqlite3@5.1.7": true
+   }
+}
